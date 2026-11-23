@@ -4,12 +4,10 @@ public class CantinaDaEscola {
     public static void main (String [] args ) {
         Scanner sc = new Scanner (System.in);
         byte opcaoDoMenu;
-        byte precoDoSalgado = 6;
-        byte precoDoSuco = 4;
-        byte precoDoBolo = 8;
-        String salgado = "salgado";
-        String suco = "suco";
-        String bolo = "bolo";
+        String itemEscolhido = "";
+        double precoDoitem = 0;
+        int quantidadeDoItem = 0;
+        double precoTotal = 0;
 
         System.out.println ("====Menu da cantina====" + System.lineSeparator()+
                 "1 - salgado - preco: R$ 6 " + System.lineSeparator() +
@@ -21,19 +19,66 @@ public class CantinaDaEscola {
         switch(opcaoDoMenu) {
 
             case 1-> {
-                System.out.println (" salgado - preco: R$ " + precoDoSalgado + " Reais" );
+                itemEscolhido = "salgado";
+                precoDoitem = 6.0;
+                System.out.println (" item escolhido: " + itemEscolhido);
+                System.out.println (" preco do item: " + precoDoitem);
+                
+                System.out.println (" quantidade: ");
+                 quantidadeDoItem = sc.nextInt();
+                
+                if ( quantidadeDoItem > 0 ) {
+                    precoTotal = quantidadeDoItem * precoDoitem;
+                }
+
             }
 
             case 2-> {
-                System.out.println (" suco - preco: R$ " + precoDoSuco + " Reais");
+                itemEscolhido = "suco ";
+                precoDoitem = 4.0;
+
+                System.out.println (" item escolhido: " + itemEscolhido);
+                System.out.println (" preco do item: " + precoDoitem);
+
+                System.out.println (" quantidade: ");
+                quantidadeDoItem = sc.nextInt();
+
+                if ( quantidadeDoItem > 0 ) {
+                    precoTotal = quantidadeDoItem * precoDoitem;
+                }
+
             }
             case 3-> {
-                System.out.println (" bolo - preco: R$ " + precoDoBolo + " Reais ");
+                itemEscolhido = "bolo ";
+                precoDoitem =  8.0;
+
+                System.out.println (" item escolhido: " + itemEscolhido);
+                System.out.println (" preco do item: " + precoDoitem);
+
+                System.out.println (" quantidade: ");
+                quantidadeDoItem = sc.nextInt();
+
+                if ( quantidadeDoItem > 0 ) {
+                    precoTotal = quantidadeDoItem * precoDoitem;
+                }
             }
             default-> {
-                System.out.println (" opcao invalida ");
+
+
+                itemEscolhido = "nenhuma ";
+                precoDoitem = 0;
+
             }
+            
+            
         }
+        System.out.println (" voce escolheu: " + itemEscolhido);
+        System.out.println (" preco do produto: " + precoDoitem + " Reais ");
+        System.out.println (" quantidade do item escolhido: " + quantidadeDoItem);
+        System.out.println (" preco final: " + precoTotal + " Reais ");
+        
+
+        
 
     }
 }
