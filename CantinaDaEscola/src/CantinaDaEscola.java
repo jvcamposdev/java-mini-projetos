@@ -43,44 +43,28 @@ public class CantinaDaEscola {
 
         }
 
-        System.out.println (" item escolhido: " + itemEscolhido);
-        System.out.println (" preco do item: " + precoDoitem);
+
 
         if (precoDoitem > 0) {
+            System.out.println(" item escolhido: " + itemEscolhido);
+            System.out.println(" preco do item: " + precoDoitem);
 
             System.out.println(" quantidade: ");
             quantidadeDoItem = sc.nextInt();
 
+            if (quantidadeDoItem <= 0) {
+                System.out.println(" quantidade invalida ");
 
+            } else {
+                precoTotal = quantidadeDoItem * precoDoitem;
 
+                System.out.println(" voce escolheu: " + itemEscolhido);
+                System.out.println(" preco do produto: " + precoDoitem + " Reais ");
+                System.out.println(" quantidade do item escolhido: " + quantidadeDoItem);
+                System.out.println(" preco final: " + precoTotal + " Reais ");
+
+            }
         }
-
-        if( quantidadeDoItem <= 0) {
-            System.out.println (" quantidade invalida ");
-        }
-
-
-        else if ( quantidadeDoItem > 0 ) {
-            precoTotal = quantidadeDoItem * precoDoitem;
-
-            System.out.println(" voce escolheu: " + itemEscolhido);
-            System.out.println(" preco do produto: " + precoDoitem + " Reais ");
-            System.out.println(" quantidade do item escolhido: " + quantidadeDoItem);
-            System.out.println(" preco final: " + precoTotal + " Reais ");
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
