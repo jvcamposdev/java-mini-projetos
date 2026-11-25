@@ -1,6 +1,14 @@
 
 import java.util.Scanner;
 public class CantinaDaEscola {
+
+    static void menuDoSistema (){
+        System.out.println ("====Menu da cantina====" + System.lineSeparator()+
+                "1 - salgado - preco: R$ 6 " + System.lineSeparator() +
+                "2 - suco - preco: R$ 4 " + System.lineSeparator() +
+                "3 - bolo - preco: R$ 8 ");
+
+    }
     public static void main (String [] args ) {
         Scanner sc = new Scanner (System.in);
         byte opcaoDoMenu;
@@ -9,10 +17,7 @@ public class CantinaDaEscola {
         int quantidadeDoItem = 0;
         double precoTotal = 0;
 
-        System.out.println ("====Menu da cantina====" + System.lineSeparator()+
-                "1 - salgado - preco: R$ 6 " + System.lineSeparator() +
-                "2 - suco - preco: R$ 4 " + System.lineSeparator() +
-                "3 - bolo - preco: R$ 8 ");
+
 
         opcaoDoMenu = sc.nextByte();
 
