@@ -21,15 +21,6 @@ public class CantinaDaEscola {
             case 1-> {
                 itemEscolhido = "salgado";
                 precoDoitem = 6.0;
-                System.out.println (" item escolhido: " + itemEscolhido);
-                System.out.println (" preco do item: " + precoDoitem);
-                
-                System.out.println (" quantidade: ");
-                 quantidadeDoItem = sc.nextInt();
-                
-                if ( quantidadeDoItem > 0 ) {
-                    precoTotal = quantidadeDoItem * precoDoitem;
-                }
 
             }
 
@@ -37,48 +28,59 @@ public class CantinaDaEscola {
                 itemEscolhido = "suco ";
                 precoDoitem = 4.0;
 
-                System.out.println (" item escolhido: " + itemEscolhido);
-                System.out.println (" preco do item: " + precoDoitem);
-
-                System.out.println (" quantidade: ");
-                quantidadeDoItem = sc.nextInt();
-
-                if ( quantidadeDoItem > 0 ) {
-                    precoTotal = quantidadeDoItem * precoDoitem;
-                }
-
             }
+
             case 3-> {
                 itemEscolhido = "bolo ";
                 precoDoitem =  8.0;
 
-                System.out.println (" item escolhido: " + itemEscolhido);
-                System.out.println (" preco do item: " + precoDoitem);
-
-                System.out.println (" quantidade: ");
-                quantidadeDoItem = sc.nextInt();
-
-                if ( quantidadeDoItem > 0 ) {
-                    precoTotal = quantidadeDoItem * precoDoitem;
-                }
             }
+
             default-> {
 
-
-                itemEscolhido = "nenhuma ";
-                precoDoitem = 0;
-
+                System.out.println (" opcao invalida ");
             }
-            
-            
-        }
-        System.out.println (" voce escolheu: " + itemEscolhido);
-        System.out.println (" preco do produto: " + precoDoitem + " Reais ");
-        System.out.println (" quantidade do item escolhido: " + quantidadeDoItem);
-        System.out.println (" preco final: " + precoTotal + " Reais ");
-        
 
-        
+        }
+
+        System.out.println (" item escolhido: " + itemEscolhido);
+        System.out.println (" preco do item: " + precoDoitem);
+
+        if (precoDoitem > 0) {
+
+            System.out.println(" quantidade: ");
+            quantidadeDoItem = sc.nextInt();
+
+
+
+        }
+
+        if( quantidadeDoItem <= 0) {
+            System.out.println (" quantidade invalida ");
+        }
+
+
+        else if ( quantidadeDoItem > 0 ) {
+            precoTotal = quantidadeDoItem * precoDoitem;
+
+            System.out.println(" voce escolheu: " + itemEscolhido);
+            System.out.println(" preco do produto: " + precoDoitem + " Reais ");
+            System.out.println(" quantidade do item escolhido: " + quantidadeDoItem);
+            System.out.println(" preco final: " + precoTotal + " Reais ");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
