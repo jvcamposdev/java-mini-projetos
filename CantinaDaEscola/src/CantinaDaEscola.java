@@ -49,7 +49,7 @@ public class CantinaDaEscola {
                     }
 
                     case 2 -> {
-                        itemEscolhido = "suco ";
+                        itemEscolhido = "suco";
                         precoDoitem = 4.0;
 
                     }
